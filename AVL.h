@@ -84,7 +84,7 @@ NodoArbol<T>* Insertar(NodoArbol<T>* raiz, NodoArbol<T>* nuevo) {
 	}
 	return raiz;
 }
-//Hallar el valor m·s izquierdo del arbol (util para las dem·s funciones)
+//Hallar el valor m√°s izquierdo del arbol (util para las dem√°s funciones)
 NodoArbol<T>* ValorIzq(NodoArbol<T>* raiz) {
 	NodoArbol<T>* temp = raiz;
 	while (temp->izquierda != NULL) {
@@ -173,48 +173,3 @@ NodoArbol<T>* BuscaRecursiva(NodoArbol<T>* raiz, T valor) {
 	}
 }	
 };
-/*
-//IMPLEMENTACION EN CASO DE OLVIDEARME===================
-	ArbolAVL<int> arbol;
-	//RECIBE EL DATO PARA BUSCAR
-	int valor;
-	NodoArbol<int>* nuevo_nodo = new NodoArbol;
-	while (1) {
-		int op; cin >> op;
-		switch (op) {
-		case 1:
-			//INSERTAR===============================================
-			cin >> valor;
-			nuevo_nodo->dato = valor;
-			arbol.root = arbol.Insertar(arbol.root, nuevo_nodo);
-			break;
-		case 2:
-			//BUSCAR=================================================
-			cin >> valor;
-			nuevo_nodo = arbol.BuscaRecursiva(arbol.root, valor);0
-			if (nuevo_nodo != NULL)
-				cout << "NODO ENCONTRADO\n";
-			else
-				cout << "NODO NO ENCONTRADO\n";
-			break;
-		case 3:
-			//BORRAR=================================================
-			cin >> valor;
-			nuevo_nodo = arbol.BuscaRecursiva(arbol.root, valor);
-			if (nuevo_nodo != NULL) {
-				cout << "NODO ENCONTRADO\n";
-				arbol.root = arbol.Borrar(arbol.root; valor);
-				cout << "NODO BORRADO\n";
-			}
-			else
-				cout << "NODO NO ENCONTRADO\n";
-			break;
-		case 4:
-			//IMPRIMIR===============================================
-			arbol.ImpPreorden(arbol.root);
-			arbol.ImpEnorden(arbol.root);
-			arbol.ImpPostorden(arbol.root);
-			break;
-		}
-	}
-*/
